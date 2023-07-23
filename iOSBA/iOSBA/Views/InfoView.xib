@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InfoView" customModule="iOSBA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="685"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ka-oq-Ugw">
+                    <rect key="frame" x="5" y="5" width="383" height="675"/>
+                    <subviews>
+                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y44-Gc-Ub1">
+                            <rect key="frame" x="0.0" y="111.66666666666666" width="383" height="458.33333333333337"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences" javaScriptEnabled="NO" minimumFontSize="30"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypn-QI-OQZ">
+                            <rect key="frame" x="0.0" y="0.0" width="383" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yb7-dx-FDs">
+                            <rect key="frame" x="0.0" y="32" width="185" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="yb7-dx-FDs" secondAttribute="height" multiplier="185:19" id="sKy-DB-Nro"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmG-PH-XGc">
+                            <rect key="frame" x="0.0" y="59" width="383" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCO-ts-kvM">
+                            <rect key="frame" x="200" y="29" width="183" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="hCO-ts-kvM" secondAttribute="height" multiplier="183:19" id="CiD-Dx-XPM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyv-At-F77">
+                            <rect key="frame" x="154" y="608" width="75" height="30"/>
+                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="IMDb">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleShadowColor" systemColor="systemIndigoColor"/>
+                            </state>
+                            <connections>
+                                <action selector="imdbUrl:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z7C-di-no6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="nmG-PH-XGc" firstAttribute="leading" secondItem="1Ka-oq-Ugw" secondAttribute="leading" id="0sU-Ae-xOU"/>
+                        <constraint firstAttribute="trailing" secondItem="ypn-QI-OQZ" secondAttribute="trailing" id="2d7-o6-Ozx"/>
+                        <constraint firstItem="ypn-QI-OQZ" firstAttribute="leading" secondItem="1Ka-oq-Ugw" secondAttribute="leading" id="4pW-Sq-qlb"/>
+                        <constraint firstItem="y44-Gc-Ub1" firstAttribute="leading" secondItem="1Ka-oq-Ugw" secondAttribute="leading" id="9Uz-XA-loZ"/>
+                        <constraint firstAttribute="bottom" secondItem="eyv-At-F77" secondAttribute="bottom" constant="37" id="CMG-Md-eaT"/>
+                        <constraint firstAttribute="trailing" secondItem="y44-Gc-Ub1" secondAttribute="trailing" id="DtO-to-heU"/>
+                        <constraint firstItem="yb7-dx-FDs" firstAttribute="leading" secondItem="1Ka-oq-Ugw" secondAttribute="leading" id="PNL-9g-DkD"/>
+                        <constraint firstAttribute="trailing" secondItem="hCO-ts-kvM" secondAttribute="trailing" id="UKt-iS-ty9"/>
+                        <constraint firstItem="hCO-ts-kvM" firstAttribute="leading" secondItem="yb7-dx-FDs" secondAttribute="trailing" constant="15" id="XHV-3a-MDg"/>
+                        <constraint firstItem="hCO-ts-kvM" firstAttribute="top" secondItem="ypn-QI-OQZ" secondAttribute="bottom" constant="5" id="YO1-c1-Gfr"/>
+                        <constraint firstItem="hCO-ts-kvM" firstAttribute="leading" secondItem="yb7-dx-FDs" secondAttribute="trailing" constant="15" id="b81-8e-ae6"/>
+                        <constraint firstItem="eyv-At-F77" firstAttribute="top" secondItem="y44-Gc-Ub1" secondAttribute="bottom" constant="38" id="bcr-a2-Ldz"/>
+                        <constraint firstItem="y44-Gc-Ub1" firstAttribute="top" secondItem="nmG-PH-XGc" secondAttribute="bottom" constant="33.670000000000002" id="cVk-Oa-Xx9"/>
+                        <constraint firstItem="yb7-dx-FDs" firstAttribute="top" secondItem="ypn-QI-OQZ" secondAttribute="bottom" constant="8" id="cYW-9J-aD1"/>
+                        <constraint firstItem="nmG-PH-XGc" firstAttribute="top" secondItem="yb7-dx-FDs" secondAttribute="bottom" constant="8" id="h9j-vv-usN"/>
+                        <constraint firstAttribute="trailing" secondItem="nmG-PH-XGc" secondAttribute="trailing" id="pcN-al-eQH"/>
+                        <constraint firstAttribute="trailing" secondItem="eyv-At-F77" secondAttribute="trailing" constant="154" id="s8A-1I-RDR"/>
+                        <constraint firstItem="ypn-QI-OQZ" firstAttribute="top" secondItem="1Ka-oq-Ugw" secondAttribute="top" id="tSL-Aq-LGF"/>
+                        <constraint firstItem="eyv-At-F77" firstAttribute="leading" secondItem="1Ka-oq-Ugw" secondAttribute="leading" constant="154" id="yTm-li-MX4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1Ka-oq-Ugw" secondAttribute="bottom" constant="5" id="Pdg-8Z-LRK"/>
+                <constraint firstAttribute="trailing" secondItem="1Ka-oq-Ugw" secondAttribute="trailing" constant="5" id="YZp-yn-i1y"/>
+                <constraint firstItem="1Ka-oq-Ugw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="g3N-KH-TNX"/>
+                <constraint firstItem="1Ka-oq-Ugw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="k5s-pC-BmX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imdbButton" destination="eyv-At-F77" id="end-ak-TY9"/>
+                <outlet property="languajeLabel" destination="yb7-dx-FDs" id="otB-2U-U5X"/>
+                <outlet property="scoreLabel" destination="hCO-ts-kvM" id="WNG-0W-GQZ"/>
+                <outlet property="summaryWebView" destination="y44-Gc-Ub1" id="sZL-JU-ywX"/>
+                <outlet property="titleLabel" destination="ypn-QI-OQZ" id="qJD-6h-pJh"/>
+                <outlet property="typeLabel" destination="nmG-PH-XGc" id="PVe-Hr-a8D"/>
+            </connections>
+            <point key="canvasLocation" x="142.74809160305344" y="34.859154929577464"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

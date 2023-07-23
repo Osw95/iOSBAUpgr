@@ -1,0 +1,7 @@
+1: Hice uso de la arquitectura MVVM principalmente por su escalabilidad y el tiempo para desarrollar la applicación.
+
+2: No agregue ninguna
+
+3: La aplicacion de las imagenes puede ser mejor implementada y usar mejor la cache, separa más el codigo de los controladores con las herencias y detallar las alertas para evitar repetir el codigo 
+
+4: El uso de la imagenes , queria implementarlo de mejor manera en la tabla y el uso de alertas pude planear mejor la estructura o la forma de aplicar las alertas 
