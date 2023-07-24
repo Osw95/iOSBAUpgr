@@ -12,7 +12,7 @@
         <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModule="iOSBA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="MovieViewController" customModule="iOSBA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,13 @@
                             <constraint firstItem="C6m-yo-N3p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y2H-q7-3cN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="d3d-of-g4c"/>
+                    <navigationItem key="navigationItem" id="d3d-of-g4c">
+                        <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="T7b-B8-ZCY">
+                            <connections>
+                                <segue destination="iue-YZ-58n" kind="presentation" id="dAn-By-txS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="MovieTable" destination="C6m-yo-N3p" id="rmZ-SV-bSv"/>
                         <segue destination="8UU-B4-oi3" kind="show" identifier="movieSegue" id="Sof-Za-eqj"/>
@@ -39,7 +45,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1991.6030534351144" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1992" y="-2"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DGy-04-XXl">
+            <objects>
+                <viewController id="iue-YZ-58n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2p2-9V-uA1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" translatesAutoresizingMaskIntoConstraints="NO" id="Op0-2c-64B">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="iue-YZ-58n" id="tu5-ci-WZV"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="REa-ui-NNh">
+                                <rect key="frame" x="0.0" y="56" width="393" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lqh-4A-1Op"/>
+                        <constraints>
+                            <constraint firstItem="Op0-2c-64B" firstAttribute="leading" secondItem="Lqh-4A-1Op" secondAttribute="leading" id="3HE-5U-6SD"/>
+                            <constraint firstItem="REa-ui-NNh" firstAttribute="bottom" secondItem="Lqh-4A-1Op" secondAttribute="bottom" id="7Jd-mg-XjN"/>
+                            <constraint firstItem="Op0-2c-64B" firstAttribute="trailing" secondItem="Lqh-4A-1Op" secondAttribute="trailing" id="GKG-kY-ZTv"/>
+                            <constraint firstItem="REa-ui-NNh" firstAttribute="trailing" secondItem="Lqh-4A-1Op" secondAttribute="trailing" id="Pxo-k5-l6c"/>
+                            <constraint firstItem="REa-ui-NNh" firstAttribute="top" secondItem="Op0-2c-64B" secondAttribute="bottom" id="rPD-vP-kiJ"/>
+                            <constraint firstItem="REa-ui-NNh" firstAttribute="leading" secondItem="Lqh-4A-1Op" secondAttribute="leading" id="y3f-bc-Mo5"/>
+                            <constraint firstItem="Op0-2c-64B" firstAttribute="top" secondItem="Lqh-4A-1Op" secondAttribute="top" id="zdP-Lv-0XG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjh-Eq-6gT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3038.9312977099235" y="-2.1126760563380285"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gtq-sG-keI">
@@ -150,7 +194,7 @@
         <!--TVShows-->
         <scene sceneID="MbQ-ce-mY5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Le3-NI-xHt" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="Le3-NI-xHt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="TVShows" image="popcorn" catalog="system" selectedImage="popcorn.fill" id="Rob-te-AE7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pbo-q2-Mgf">
@@ -201,11 +245,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YKh-FI-GFo"/>
+        <segue reference="Sof-Za-eqj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="popcorn" catalog="system" width="102" height="128"/>
         <image name="popcorn.fill" catalog="system" width="102" height="128"/>
         <systemColor name="systemBackgroundColor">

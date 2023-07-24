@@ -11,6 +11,10 @@ import CoreData
 
 final class InfoViewModel {
     
+   // #warning("Sera bueno tener varios Observables")
+    
+   // #error("Y este es un mensaje de error")
+    
     // MARK: VARIABLES
     
     var tvShowFavorites: Observable<[Tvshow]> = Observable([])
@@ -21,7 +25,7 @@ final class InfoViewModel {
     
     private var myFavoritesShows: [Tvshow]?
     
-    var delegateAlert: alertProtocolInfo?
+    var alertDelegate: alertProtocolInfo?
     
 }
 
@@ -35,6 +39,8 @@ protocol alertProtocolInfo {
 
 extension InfoViewModel{
     
+    
+
     func validateCoredata(_ id: Int) -> Bool {
         
         do {
@@ -54,7 +60,7 @@ extension InfoViewModel{
         } catch {
             
             DispatchQueue.main.async {
-               self.delegateAlert?.alertMsg("Oops, algo salió mal!", "")
+               self.alertDelegate?.alertMsg("Oops, algo salió mal!", "")
             }
             
             return false
@@ -87,7 +93,7 @@ extension InfoViewModel{
                 
             
             DispatchQueue.main.async {
-                self.delegateAlert?.alertMsg("Oops, algo salió mal!", "")
+                self.alertDelegate?.alertMsg("Oops, algo salió mal!", "")
             }
             
             return false
@@ -96,7 +102,7 @@ extension InfoViewModel{
         } catch {
                 
             DispatchQueue.main.async {
-               self.delegateAlert?.alertMsg("Oops, algo salió mal!", "")
+               self.alertDelegate?.alertMsg("Oops, algo salió mal!", "")
             }
                 
             return false
@@ -143,7 +149,7 @@ extension InfoViewModel{
             }
             
             DispatchQueue.main.async {
-               self.delegateAlert?.alertMsg("Oops, algo salió mal!", "")
+               self.alertDelegate?.alertMsg("Oops, algo salió mal!", "")
             }
             
             return false
@@ -151,7 +157,7 @@ extension InfoViewModel{
         } catch {
 
             DispatchQueue.main.async {
-               self.delegateAlert?.alertMsg("Oops, algo salió mal!", "")
+               self.alertDelegate?.alertMsg("Oops, algo salió mal!", "")
             }
             
             return false

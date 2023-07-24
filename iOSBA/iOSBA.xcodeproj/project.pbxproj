@@ -16,6 +16,8 @@
 		DB389FE42A693888002B60ED /* Tvshow+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB389FE22A693888002B60ED /* Tvshow+CoreDataClass.swift */; };
 		DB389FE52A693888002B60ED /* Tvshow+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB389FE32A693888002B60ED /* Tvshow+CoreDataProperties.swift */; };
 		DB389FE82A693BD8002B60ED /* DetailShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB389FE72A693BD8002B60ED /* DetailShow.swift */; };
+		DB3E5E0D2A6DC9CE0094D626 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E5E0C2A6DC9CD0094D626 /* SearchViewController.swift */; };
+		DB3E5E0F2A6DCA050094D626 /* SearchTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E5E0E2A6DCA050094D626 /* SearchTableViewModel.swift */; };
 		DB44C7DD2A671DEE00941DB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB44C7DC2A671DEE00941DB9 /* AppDelegate.swift */; };
 		DB44C7DF2A671DEE00941DB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB44C7DE2A671DEE00941DB9 /* SceneDelegate.swift */; };
 		DB44C7E12A671DEE00941DB9 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB44C7E02A671DEE00941DB9 /* MovieViewController.swift */; };
@@ -65,6 +67,9 @@
 		DB389FE22A693888002B60ED /* Tvshow+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tvshow+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DB389FE32A693888002B60ED /* Tvshow+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tvshow+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DB389FE72A693BD8002B60ED /* DetailShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShow.swift; sourceTree = "<group>"; };
+		DB3E5E0C2A6DC9CD0094D626 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DB3E5E0E2A6DCA050094D626 /* SearchTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewModel.swift; sourceTree = "<group>"; };
+		DB3E5E112A6E07990094D626 /* TestPlayGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestPlayGround.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DB44C7D92A671DEE00941DB9 /* iOSBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB44C7DC2A671DEE00941DB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB44C7DE2A671DEE00941DB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +147,14 @@
 			path = CDModel;
 			sourceTree = "<group>";
 		};
+		DB3E5E102A6E07520094D626 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				DB3E5E112A6E07990094D626 /* TestPlayGround.playground */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		DB44C7D02A671DEE00941DB9 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +178,7 @@
 		DB44C7DB2A671DEE00941DB9 /* iOSBA */ = {
 			isa = PBXGroup;
 			children = (
+				DB3E5E102A6E07520094D626 /* Test */,
 				DB44C8142A6748A200941DB9 /* Views */,
 				DB44C8132A67488200941DB9 /* Model */,
 				DB44C8122A67486800941DB9 /* ViewModel */,
@@ -204,6 +218,7 @@
 				DB44C7E02A671DEE00941DB9 /* MovieViewController.swift */,
 				82E183CC2A68EC7100DACF8A /* InfoViewController.swift */,
 				DB44C8152A674AA800941DB9 /* FavoritesViewController.swift */,
+				DB3E5E0C2A6DC9CD0094D626 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +238,7 @@
 				DB44C81B2A67904C00941DB9 /* MovieTableViewModel.swift */,
 				DB44C8212A6796DB00941DB9 /* FavoriteTableViewModel.swift */,
 				DB95E1B92A6A15CD00644375 /* InfoViewModel.swift */,
+				DB3E5E0E2A6DCA050094D626 /* SearchTableViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -388,7 +404,9 @@
 				DB389FE52A693888002B60ED /* Tvshow+CoreDataProperties.swift in Sources */,
 				DB389FE12A68FB6E002B60ED /* InfoView.swift in Sources */,
 				DB44C7E72A671DEE00941DB9 /* iOSBA.xcdatamodeld in Sources */,
+				DB3E5E0F2A6DCA050094D626 /* SearchTableViewModel.swift in Sources */,
 				DB44C8222A6796DB00941DB9 /* FavoriteTableViewModel.swift in Sources */,
+				DB3E5E0D2A6DC9CE0094D626 /* SearchViewController.swift in Sources */,
 				DB44C81E2A67950600941DB9 /* CustomImageView.swift in Sources */,
 				82E183CD2A68EC7100DACF8A /* InfoViewController.swift in Sources */,
 				DB44C7E12A671DEE00941DB9 /* MovieViewController.swift in Sources */,

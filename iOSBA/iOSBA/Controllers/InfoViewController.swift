@@ -28,7 +28,7 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.delegateAlert = self
+        viewModel.alertDelegate = self
         
         //viewModel.delegate = self
         

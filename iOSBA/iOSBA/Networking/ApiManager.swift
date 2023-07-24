@@ -20,15 +20,9 @@ final class ApiManager {
         
         var task:URLSessionDataTask!
         
-        guard let urlSearch =  resource else { return }
+        guard let urlSearch = resource else { return }
         
         let urlConstructor = urlBase + urlSearch
-        
-        #if DEBUG
-
-           print("Url consulted: \(urlConstructor)")
-
-        #endif
         
         let url = URL(string: urlConstructor)
         
@@ -37,7 +31,9 @@ final class ApiManager {
         task = URLSession.shared.dataTask(with: url) { data, response, error in
             
             if let error = error {
+                
                 completion(.failure(error))
+                
                 return
             }
             
