@@ -12,10 +12,15 @@ enum APIResult<T: Decodable> {
     case failure(Error)
 }
 
+
 final class ApiManager {
     
     private let urlBase = "https://api.tvmaze.com/"
-
+    
+    ///  Loads de data from api and it parse the data to a generic type "T"
+    /// - Parameters:
+    ///   - resource: Url that would be consulted
+    ///   - completion:  A closure that would be executed when the operation is completed
     func load<T: Decodable>(resource: String?, completion: @escaping (APIResult<[T]>) -> ()) {
         
         var task:URLSessionDataTask!
